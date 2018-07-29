@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 from sklearn.feature_selection import RFECV
 from sklearn.cross_validation import train_test_split
 
-train=pd.read_csv("C:\\Users\\lenovo\\Desktop\\Dataset\\all\\train.csv")
-test=pd.read_csv("C:\\Users\\lenovo\\Desktop\\Dataset\\all\\test.csv")
-gender=pd.read_csv("C:\\Users\\lenovo\\Desktop\\Dataset\\all\\gender_submission.csv")
+train=pd.read_csv("Titanic_Problem/train.csv")
+test=pd.read_csv("Titanic_Problem/test.csv")
+gender=pd.read_csv("Titanic_Problem/gender_submission.csv")
 test['Survived']=-1
 df=pd.concat([train,test],axis=0)
 df=df.loc[:,['Age','Pclass','Sex','SibSp','Parch','Embarked','Fare','Survived']]
